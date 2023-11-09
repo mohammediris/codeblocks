@@ -1,0 +1,3 @@
+this is a mail send by python 
+
+from alerts email of school of iris 

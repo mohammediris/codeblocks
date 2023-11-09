@@ -1,0 +1,29 @@
+
+enable
+enable
+localhost>enable
+localhost#configure terminal
+localhost(config)#show run
+[?1h=! Command: show running-config
+! device: localhost (vEOS, EOS-4.20.15M)
+!
+! boot system flash:/vEOS-lab.swi
+!
+transceiver qsfp default-mode 4x10G
+!
+ntp server 192.168.2.1
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username admin role network-admin secret sha512 $6$zo3.dRx4lN18Owme$2xzaD6kP.LFK WJTCdTAtWSRBx9gQ6oN6YhXd8mZmTXwA9vPJeNaTCYjllmU9miwInKnXCWbK8kMGtp7Y6MrTJ/
+!
+interface Management1
+   ip address 192.168.2.13/24
+!
+no ip routing
+!
+end
+[K[?1l>localhost(config)#end
+localhost#
